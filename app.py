@@ -160,32 +160,32 @@ def main():
     st.caption("Upload PDFs and ask questions about their content using RAG (Retrieval-Augmented Generation)")
 
     with st.expander("ℹ️ How It Works – Step-by-Step Explanation"):
-    st.markdown("""
-### 🧠 SmartNoteRAG: What Happens Behind the Scenes?
-
-1. **📄 Upload a PDF File**  
-   You start by uploading a lecture or research PDF. We extract all readable text from it.
-
-2. **✂️ Chunking the Text**  
-   The text is split into smaller, overlapping pieces (called *chunks*) so we can search and understand it better later.
-
-3. **🔤 Embedding the Chunks**  
-   Each chunk is converted into a numeric representation (embedding) using a pre-trained `sentence-transformers` model. This allows us to compare text semantically.
-
-4. **📚 Storing in a Vector Database (FAISS)**  
-   All embeddings are stored in a FAISS index, a fast similarity search engine that helps retrieve the most relevant parts of the document later.
-
-5. **🔎 Retrieval of Relevant Chunks**  
-   When you ask a question or request notes, the system finds the top document chunks most relevant to your query using vector similarity.
-
-6. **💬 Generation with Gemini**  
-   The retrieved text chunks and your query are sent to **Gemini**, a powerful language model. It generates answers, summaries, or notes based only on the document content.
-
-7. **🎯 Final Output**  
-   The result is a clean, concise response that’s grounded in the actual content of your uploaded PDF.
-
-> ⚠️ If your question can't be answered from the document, you'll be told so. No hallucinations here!
-    """)
+        st.markdown("""
+    ### 🧠 SmartNoteRAG: What Happens Behind the Scenes?
+    
+    1. **📄 Upload a PDF File**  
+       You start by uploading a lecture or research PDF. We extract all readable text from it.
+    
+    2. **✂️ Chunking the Text**  
+       The text is split into smaller, overlapping pieces (called *chunks*) so we can search and understand it better later.
+    
+    3. **🔤 Embedding the Chunks**  
+       Each chunk is converted into a numeric representation (embedding) using a pre-trained `sentence-transformers` model. This allows us to compare text semantically.
+    
+    4. **📚 Storing in a Vector Database (FAISS)**  
+       All embeddings are stored in a FAISS index, a fast similarity search engine that helps retrieve the most relevant parts of the document later.
+    
+    5. **🔎 Retrieval of Relevant Chunks**  
+       When you ask a question or request notes, the system finds the top document chunks most relevant to your query using vector similarity.
+    
+    6. **💬 Generation with Gemini**  
+       The retrieved text chunks and your query are sent to **Gemini**, a powerful language model. It generates answers, summaries, or notes based only on the document content.
+    
+    7. **🎯 Final Output**  
+       The result is a clean, concise response that’s grounded in the actual content of your uploaded PDF.
+    
+    > ⚠️ If your question can't be answered from the document, you'll be told so. No hallucinations here!
+        """)
 
     # Load embedding model
     if st.session_state.embedder is None:
