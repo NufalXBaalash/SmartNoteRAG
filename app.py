@@ -331,13 +331,13 @@ def main():
                     st.write(answer)
                     
                     # Show relevant chunks
-                    if relevant_chunks:
-                        with st.expander("📋 View Relevant Document Chunks"):
-                            for j, chunk in enumerate(relevant_chunks):
-                                st.caption(f"Chunk {j+1}")
-                                st.text(chunk)
-                                if j < len(relevant_chunks) - 1:
-                                    st.divider()
+                    #if relevant_chunks:
+                        #with st.expander("📋 View Relevant Document Chunks"):
+                            #for j, chunk in enumerate(relevant_chunks):
+                                #st.caption(f"Chunk {j+1}")
+                                #st.text(chunk)
+                                #if j < len(relevant_chunks) - 1:
+                                    #st.divider()
     
     # Footer
     st.divider()
