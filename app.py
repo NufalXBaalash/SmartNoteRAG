@@ -276,6 +276,7 @@ def main():
             st.write(chat["answer"])
             
             # Show relevant chunks
+            """
             if chat.get("chunks"):
                 with st.expander("📋 View Relevant Document Chunks"):
                     for j, chunk in enumerate(chat["chunks"]):
@@ -283,6 +284,7 @@ def main():
                         st.text(chunk)
                         if j < len(chat["chunks"]) - 1:
                             st.divider()
+                            """
     
     # Handle example question
     if hasattr(st.session_state, 'example_question'):
