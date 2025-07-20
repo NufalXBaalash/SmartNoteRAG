@@ -39,7 +39,7 @@ except ImportError as e:
 
 # Configure page
 st.set_page_config(
-    page_title="PDF Question Answering Chat",
+    page_title="SmartNoteRAG",
     page_icon="🤖",
     layout="wide"
 )
@@ -311,7 +311,7 @@ def main():
     
     # Footer
     st.divider()
-    st.caption("Built with ❤️ using Streamlit, Sentence Transformers, and Google AI")
+    st.caption("Built by Ahmed Baalash using Streamlit, Sentence Transformers, and Google AI")
 
 # Run the app
 if __name__ == "__main__":
